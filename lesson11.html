@@ -1,0 +1,69 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<script>
+			var emptyObj = {
+		
+			}
+			var person = {
+				firstName: "John"
+			}
+			
+			var messageObj = {
+				showMessage:function(val){
+					alert(val);
+				}
+			}
+			var person1 = {
+				firstName:"James",
+				lastName:"Bond",
+				age:15,
+				getFullName:function(){
+					return this.firstName + ' ' + this.lastName;
+				}
+			}
+			for(var key in person1)
+			{
+				console.log(key);
+			}
+			//console.log(person1.getFullName());
+			person1.firstName = "TEDU";
+			person1["lastName"] = "JavaScript";
+			//console.log(person1.getFullName());
+			//console.log(person1.firstName + ' ' + person1.lastName );
+			
+			var person2 = new Object();
+			person2.firstName="TEDU";
+			person2.lastName = "JS";
+			person2.getFullName = function(){
+				return person2.firstName + ' ' + person2.lastName;
+			}
+			//console.log(person2.getFullName());
+			
+			var person3 = new Object();
+			//console.log(person3.firstName);
+			<!-- if(person3.hasOwnProperty("firstName")){ -->
+				<!-- console.log(person3.firstName); -->
+			<!-- } -->
+			<!-- else -->
+			<!-- { -->
+			<!-- console.log('This propery is not existed'); -->
+			<!-- } -->
+			
+			function changeReference(person1){
+				person1.firstName = "James 1";
+				person1.lastName = "Bond 1";
+			}
+			changeReference(person1);
+			console.log(person1.getFullName());
+			person1.address = {
+				phone:"4234234",
+				email:"342342",
+				street:"342 hanoi"
+			}
+			console.log(person1.address.street);
+		</script>
+	</body>
+</html>
