@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Abc</title>
+	</head>
+	<body>
+	<div id="errorMessage"></div>
+		<script>
+			"use strict";
+			function foo(){
+			
+				var x,y,z;
+				
+				x= 1;
+				y = 2;
+				z = x+ y;
+				console.log(z);
+				var obj = {
+					go: function(){
+						console.log(this);
+					}
+				}
+
+				obj.go();
+			}
+			
+			foo();
+		</script>
+	</body>
+</html>
