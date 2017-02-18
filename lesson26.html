@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Abc</title>
+	</head>
+	<body>
+	<div id="errorMessage"></div>
+		<script>
+			
+			function Person(){
+				this.firstName = "",
+				this.lastName = "",
+				this.age = 0
+			}
+			
+			var person1 = new Person();
+			person1.firstName = "TEDU";
+			person1.lastName = "Online";
+			<!-- <!-- console.log(Object.keys(person1)); --> -->
+			<!-- <!-- for(var prop in person1){ --> -->
+				<!-- <!-- console.log(prop); --> -->
+			<!-- <!-- } --> -->
+			
+			console.log(Object.getOwnPropertyDescriptor(person1,"firstName"));
+			
+			Object.defineProperty(person1,"firstName",{
+				writable:false,
+				enumerable:false
+			});
+			console.log(Object.getOwnPropertyDescriptor(person1,"firstName"));
+			console.log(Object.keys(person1));
+		</script>
+	</body>
+</html>

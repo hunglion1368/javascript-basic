@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Abc</title>
+	</head>
+	<body>
+	<div id="errorMessage"></div>
+		<script>
+			<!-- function Person(_firstName,_lastName,_age){ -->
+				<!-- this.firstName = _firstName; -->
+				<!-- this.lastName = _lastName; -->
+				<!-- this.age = _age; -->
+				<!-- this.getFullName = function(){ -->
+					<!-- return this.firstName + ' ' + this.lastName; -->
+				<!-- } -->
+			<!-- } -->
+			<!-- var person1 = new Person("Nguyen","Van A",12); -->
+
+			
+			<!-- console.log(person1.firstName + ' ' + person1.lastName); -->
+			
+			<!-- var person2 = new Person("Tran","Van B",15); -->
+
+			
+			<!-- console.log(person2.getFullName()); -->
+			
+			function Person(){
+				var _firstName = "unknown";
+				var _lastName = "unknown";
+				
+				Object.defineProperties(this,{
+					"FirstName":{
+						set:function(value){
+							_firstName= value;
+						},
+						get:function(){
+							return _firstName;
+						}
+					},
+					"LastName":{
+						set:function(value){
+							_lastName= value;
+						},
+						get:function(){
+							return _lastName;
+						}
+					}
+				});
+			}
+			
+			var person1 = new Person();
+			person1.FirstName = "TEDU";
+			person1.LastName = "Online";
+			console.log(person1.FirstName + " " + person1.LastName);
+		</script>
+	</body>
+</html>
